@@ -1,0 +1,3 @@
+# new 'ignore' file-extension to rename '.pacnew' file
+pacnew_ignore_extension: ".pacnew_ignored"
+
