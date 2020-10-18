@@ -16,7 +16,7 @@ Ignore specific Arch Linux '.pacnew' files after system upgrade.
 
 ## Purpose
 
-* Post-upgrade (i.e. a `pacman -Syu` operation), ignore 'some_file.pacnew' file
+* After a `pacman -Syu` operation, ignore 'some_file.pacnew' file
   by moving it to 'some_file.pacnew_ignored'.
 
 ## Supported Operating Systems
