@@ -2,5 +2,5 @@
 pacnew_ignore_extension: ".ignored"
 
 # pacman user-defined hooks directory
-pacman_hooks_dir: "/etc/pacman.d/hooks"
+pacman_hooks_dir: "/usr/share/libalpm/hooks"
 

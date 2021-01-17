@@ -6,7 +6,7 @@
 
 - name: "Create upgrade-hook to handle pacnew for '{{ file_path }}'"
   template:
-    dest: "{{ pacman_hooks_dir }}/{{ owning_package_name }}-{{ file_path | basename }}.hook"
+    dest: "{{ pacman_hooks_dir }}/ans-{{ owning_package_name }}-{{ file_path | basename }}.hook"
     src: 'upgrade_hook.j2'
     owner: 'root'
     group: 'root'
