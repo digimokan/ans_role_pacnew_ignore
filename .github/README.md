@@ -32,8 +32,6 @@ Ignore specific Arch Linux '.pacnew' files after system upgrade.
    ```yaml
    # requirements.yml
    - src: https://github.com/digimokan/ans_role_pacnew_ignore
-     version: master
-     name: pacnew_ignore
    ```
 
 2. From the project root directory, install/download the role:
@@ -53,7 +51,7 @@ Ignore specific Arch Linux '.pacnew' files after system upgrade.
      tasks:
        - name: "Ignore updated '.pacnew' files after system upgrade"
          include_role:
-           name: pacnew_ignore
+           name: ans_role_pacnew_ignore
          vars:
            pacnew_file_path: "/etc/locale.gen"
    ```
