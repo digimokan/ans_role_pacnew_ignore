@@ -1,0 +1,6 @@
+- name: "Set up post-upgrade .pacnew handling for {{ pacnew_file_path }}"
+  include_tasks: handle_pacnew_file.yml
+  loop: "{{ pacnew_file_path | list }}"
+  loop_control:
+    loop_var: file_path
+

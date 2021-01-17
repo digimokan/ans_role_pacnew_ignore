@@ -1,0 +1,14 @@
+# DO NOT MAKE CHANGES TO THIS FILE.
+# THIS FILE IS MANAGED BY ANSIBLE.
+# HANDLES POST-UPGRADE PACNEW-FILES BY MARKING THEM AS IGNORED.
+
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = "{{ owning_package_name }}"
+
+[Action]
+Description = Marking "{{ dot_pacnew_file_path }}" as ignored
+When = PostTransaction
+Exec = /bin/sh -c 'if [ -f "{{ dot_pacnew_file_path }}" ]; then mv "{{ dot_pacnew_file_path }}" "{{ dot_pacnew_file_path }}{{ pacnew_ignore_extension }}"; fi'
+

@@ -1,3 +1,6 @@
-# new file-extension to replace '.pacnew' extension
-pacnew_ignore_extension: ".pacnew.ignored"
+# new file-extension to append after '.pacnew' extension
+pacnew_ignore_extension: ".ignored"
+
+# pacman user-defined hooks directory
+pacman_hooks_dir: "/etc/pacman.d/hooks"
 

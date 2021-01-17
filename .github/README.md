@@ -64,7 +64,8 @@ See the role `defaults` file, for overridable vars:
 
 Define these _required_ vars for the role:
 
-  * `pacnew_file_path`: the '.pacnew' file to ignore, post-upgrade
+  * `pacnew_file_path`: the '.pacnew' file to ignore, post-upgrade (_NOTE: do
+    not specify '.pacnew' extension_)
 
 ## Contributing
 
