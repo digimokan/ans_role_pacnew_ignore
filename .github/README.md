@@ -53,7 +53,8 @@ Ignore specific Arch Linux '.pacnew' files after system upgrade.
          include_role:
            name: ans_role_pacnew_ignore
          vars:
-           pacnew_file_path: "/etc/locale.gen"
+           file_paths:
+            - "/etc/locale.gen"
    ```
 
 ## Role Options
@@ -64,8 +65,8 @@ See the role `defaults` file, for overridable vars:
 
 Define these _required_ vars for the role:
 
-  * `pacnew_file_path`: the '.pacnew' file to ignore, post-upgrade (_NOTE: do
-    not specify '.pacnew' extension_)
+  * `file_paths`: list of '.pacnew' files to ignore, post-upgrade (_NOTE: do
+    not specify '.pacnew' extensions_)
 
 ## Contributing
 
