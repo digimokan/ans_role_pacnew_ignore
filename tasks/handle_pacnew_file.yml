@@ -4,13 +4,6 @@
   failed_when: "'error:' in pkg_query.stderr"
   changed_when: false
 
-- name: "Create pacman hooks dir, if not exist"
-  file:
-    path: "{{ pacman_hooks_dir }}"
-    state: directory
-  become: true
-  become_user: root
-
 - name: "Create upgrade-hook to handle pacnew for '{{ file_path }}'"
   template:
     dest: "{{ pacman_hooks_dir }}/{{ owning_package_name }}-{{ file_path | basename }}.hook"

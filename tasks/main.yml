@@ -1,3 +1,10 @@
+- name: "Create pacman hooks dir, if not exist"
+  file:
+    path: "{{ pacman_hooks_dir }}"
+    state: directory
+  become: true
+  become_user: root
+
 - name: "Set up post-upgrade .pacnew handling for {{ file_paths }}"
   include_tasks: handle_pacnew_file.yml
   loop: "{{ file_paths }}"
