@@ -50,7 +50,7 @@ Ignore specific Arch Linux '.pacnew' files after system upgrade.
      connection: local
      tasks:
        - name: "Ignore updated '.pacnew' files after system upgrade"
-         include_role:
+         ansible.builtin.include_role:
            name: ans_role_pacnew_ignore
          vars:
            file_paths:

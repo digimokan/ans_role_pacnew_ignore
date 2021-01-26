@@ -1,11 +1,11 @@
 - name: "Query pacman DB for package that owns {{ file_path }}"
-  command: pacman -Qo "{{ file_path }}"
+  ansible.builtin.command: pacman -Qo "{{ file_path }}"
   register: pkg_query
   failed_when: "'error:' in pkg_query.stderr"
   changed_when: false
 
 - name: "Create upgrade-hook to handle pacnew for '{{ file_path }}'"
-  template:
+  ansible.builtin.template:
     dest: "{{ pacman_hooks_dir }}/ans-{{ owning_package_name }}-{{ file_path | basename }}.hook"
     src: 'upgrade_hook.j2'
     owner: 'root'
